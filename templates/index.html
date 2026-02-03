@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agulla's Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <ul>
+            <li><a href="#in1"><i class="fa-solid fa-house"></i></a></li>
+                <li class="dropdown">
+                    <a href="#in3">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#add-transaction">Add Transaction</a></li>
+                        <li><a href="#view-transactions">View All Transactions</a></li>
+                        <li><a href="#monthly-summary">Monthly Summary</a></li>
+                        <li><a href="#category-breakdown">Category Breakdown</a></li>
+                        <li><a href="#budget-planner">Budget Planner</a></li>
+                        <li><a href="#charts">Expense Chart</a></li>
+                        <li><a href="#export">Export Data</a></li>
+                    </ul>
+                </li>
+                <li><a href="#in4">Contact</a></li>
+                <li><a href="#in5">About</a></li>
+                <li><a href="#home"><i class="fa-solid fa-bars"></i></a></li>
+            
+                <li><a href="{{ url_for('login') }}">
+                  <i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+            </ul>
+            <ul class="navbar-right">
+                <li><a href="{{ url_for('signup') }}">
+                    <i class="fa-solid fa-user-plus"></i> Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="hero">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source id="video-source" src="{{ url_for('static', filename='videos/small2.mp4') }}" type="video/mp4">
+            
+        </video>
+          
+          
+        <div class="div2">
+            <h1>Hello,</h1>
+            <h2>Welcome to Web</h2>
+            <h3>Application</h3>
+            <h4>𝐅𝐢𝐧𝐚𝐧𝐜𝐢𝐚𝐥 𝐓𝐫𝐚𝐜𝐤𝐞𝐫</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            <ul>
+                <li>
+                    <a href="{{ url_for('signup') }}">
+                     <i class="fa-solid fa-magnifying-glass"></i> Sign-Up
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="div11">
+        <marquee id="scrolltext">
+            <img src="{{ url_for('static', filename='images/vvv.jpg') }}" width="300" height="150">
+            <img src="{{ url_for('static', filename='images/vaa1.jpg') }}" width="300" height="150">
+            <img src="{{ url_for('static', filename='images/vaaa1.jpg') }}" width="300" height="150">
+            <img src="{{ url_for('static', filename='images/vv4.jpg') }}" width="300" height="150">
+            <img src="{{ url_for('static', filename='images/va1.jpg') }}" width="300" height="150">
+            <img src="{{ url_for('static', filename='images/va3.jpg') }}" width="300" height="150">
+            <img src="{{ url_for('static', filename='images/vassu8.jpg') }}" width="300" height="150">
+            <img src="{{ url_for('static', filename='images/y1.jpg') }}" width="300" height="150">
+        </marquee>
+    </div>
+
+    <div class="div22">
+        <div class="div12">
+            <h1>Personal Financial Tracker</h1>
+            <p>
+                This personal financial tracker website is designed to help users manage their income and expenses efficiently. It includes a secure signup and login system using Flask and SQLite, ensuring each user's data is private and accessible only after authentication. Once logged in, users can add, edit, and delete their financial transactions on a personalized dashboard. The interface is simple, responsive, and user-friendly, allowing for easy tracking of daily, weekly, or monthly budgets. Built using HTML, CSS, JavaScript, Python, and SQL, this project demonstrates full-stack web development from frontend design to backend logic and database integration.
+            </p>
+        </div>
+    </div>
+
+    <div class="div33"> 
+        <div class="div331">
+            <img src="{{ url_for('static', filename='images/logo2.jpeg') }}">
+            <p>&copy; 2025 Personal Financial Tracker | Designed by -xxxxx xxxxx</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div> 
+    </div>
+
+</body>
+</html>

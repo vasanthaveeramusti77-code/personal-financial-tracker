@@ -1,0 +1,55 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="navbar-left">
+                <h2>MyFinance</h2>
+            </div>
+            <div class="navbar-right">
+                <span class="welcome">Welcome, {{ username }}!</span>
+                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="dashboard-container">
+        <div class="summary">
+            <div class="card income">
+                Income<br>
+                <strong>₹{{ income }}</strong>
+            </div>
+            <div class="card expense">
+                Expense<br>
+                <strong>₹{{ expense }}</strong>
+            </div>
+            <div class="card balance">
+                Balance<br>
+                <strong>₹{{ balance }}</strong>
+            </div>
+        </div>
+
+        <div class="recent-transactions">
+            <h3>Recent Transactions</h3>
+            <ul>
+                {% for txn in transactions %}
+                    <li>{{ txn.date }} - {{ txn.category }} - ₹{{ txn.amount }} ({{ txn.type }})</li>
+                {% else %}
+                    <li>No transactions found.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

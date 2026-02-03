@@ -1,0 +1,187 @@
+/* Reset some basics */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('../images/vv1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #00ffc8;
+}
+
+.navbar .welcome {
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  background-color: #ff5c5c;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ff1e1e;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+}
+
+/* Summary Cards */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  margin: 0 10px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.income {
+  color: #00ff88;
+}
+
+.expense {
+  color: #ff7070;
+}
+
+.balance {
+  color: #ffd700;
+}
+
+/* Transaction Form */
+.transaction-form {
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.transaction-form h3 {
+  margin-bottom: 15px;
+}
+
+.transaction-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.transaction-form input,
+.transaction-form select,
+.transaction-form button {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.transaction-form input,
+.transaction-form select {
+  flex: 1 1 150px;
+}
+
+.transaction-form button {
+  background-color: #00ffc8;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1 1 100px;
+}
+
+.transaction-form button:hover {
+  background-color: #00ccaa;
+}
+
+/* Transaction List */
+.recent-transactions {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.recent-transactions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-transactions li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-link {
+  color: #ff4d4d;
+  text-decoration: none;
+}
+
+.delete-link:hover {
+  color: #ff1a1a;
+}
+
+/* Flash Messages */
+.flash-container {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 10px;
+}
+
+.flash-message {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.flash-message.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.flash-message.error,
+.flash-message.danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.flash-message.info {
+  background-color: #17a2b8;
+  color: white;
+}

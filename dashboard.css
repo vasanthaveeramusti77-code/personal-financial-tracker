@@ -1,0 +1,123 @@
+/* static/css/dashboard.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Background */
+  body {
+    background-image: url("../images/vv1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .navbar-left h2 {
+    color: white;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .welcome {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .logout-btn {
+    background-color: #00bcd4;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .logout-btn:hover {
+    background-color: #0097a7;
+  }
+  
+  /* Dashboard Container */
+  .dashboard-container {
+    margin-top: 120px;
+    padding: 30px;
+  }
+  
+  /* Summary Cards */
+  .summary {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 30px;
+    border-radius: 12px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .income {
+    border-left: 6px solid green;
+  }
+  .expense {
+    border-left: 6px solid red;
+  }
+  .balance {
+    border-left: 6px solid blue;
+  }
+  
+  /* Recent Transactions */
+  .recent-transactions {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .recent-transactions h3 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .recent-transactions ul {
+    list-style: none;
+  }
+  
+  .recent-transactions li {
+    margin: 8px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  

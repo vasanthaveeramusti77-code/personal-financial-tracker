@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul class="navbar-left">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="#in3">Services</a></li>
+                <li><a href="#in4"></a>Contact</li>
+                <li><a href="#in5"></a>about-</li>
+            </ul>
+            <ul class="navbar-right">
+                <li><a href="{{ url_for('signup') }}">
+                    <i class="fa-solid fa-user-plus"></i> Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="background">
+        <img src="{{ url_for('static', filename='images/vassu1.jpg') }}" width="1600" height="700">
+    </div>
+
+    <div class="form-container">
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('login') }}" method="POST" autocomplete="off">
+            <h2>Login</h2>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Login</button>
+
+            <div class="extra-links">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+
+        <p class="signup-redirect">
+            Don't have an account? 
+            <a href="{{ url_for('signup') }}">Sign Up</a>
+        </p>
+    </div>
+</body>
+</html>

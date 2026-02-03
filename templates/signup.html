@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul class="navbar-left">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="#in3">Services</a></li>
+                <li><a href="#in4">Contact</a></li>
+                <li><a href="#in5">About</a></li>
+            </ul>
+            <ul class="navbar-right">
+                <li><a href="{{ url_for('login') }}">
+                  <i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="background"></div>
+
+    <div class="signup-container">
+        <h2>Create Account</h2>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('signup') }}" method="POST" autocomplete="off">
+            <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+            <input type="email" name="email" placeholder="Email" autocomplete="off" required>
+            <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

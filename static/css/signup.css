@@ -1,0 +1,127 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    height: 90px;
+    width: 100%;
+    background-color: #0f1111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Background Image */
+.background {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px);
+    background-image: url("../images/v6.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Signup Container */
+.signup-container {
+    position: relative;
+    margin-top: 140px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+}
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0f1111;
+}
+
+.signup-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signup-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0f1111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.signup-container button:hover {
+    background-color: #333;
+}
+
+/* Flash Messages */
+.flash-messages {
+    margin: 100px auto 20px auto;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.alert {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid transparent;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.alert-error,
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
